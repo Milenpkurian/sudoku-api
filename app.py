@@ -70,6 +70,7 @@ def solve():
         try:
             puzzles.append(request.form['sudoku'])
         except KeyError:
+            print("skipped")
             abort(400, 'sudoku key missing in the input form. '
                   'Expected format: sudoku=<81-char-string>')
     else:
