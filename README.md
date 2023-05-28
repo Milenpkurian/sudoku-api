@@ -70,18 +70,6 @@ NOTE that *sudoku* is a mandatory *key* in all the following formats.
 
 `curl -X POST -d "sudoku=9715..842..69...1....8.2..95.....79...76.83...28.....57..1.5....4...91..819..7254" http://127.0.0.1:5000`
 
-#### JSON-based request
-
-`curl -H 'Content-Type: application/json' -X POST -d '{"sudoku":["9715..842..69...1....8.2..95.....79...76.83...28.....57..1.5....4...91..819..7254"]}' http://127.0.0.1:5000`
-
-#### Batch request
-`curl -H 'Content-Type: application/json' -X POST -d '{"sudoku":["9715..842..69...1....8.2..95.....79...76.83...28.....57..1.5....4...91..819..7254", ".1...8...3.472169...6....1....9.253..421.378..358.6....9....1...213874.9...5...2."]}' http://127.0.0.1:5000`
-
-#### File-based request
-Assuming that sudoku puzzles are in a file location `data/easy_10_sudoku.json`
-
-`curl -H 'Content-Type: application/json' -X POST -d @data/easy_10_sudoku.json http://127.0.0.1:5000`
-
 ## Example Responses
 
 Response is always a JSON-based list. Each element of the list is the *input* puzzle, *solution* (set to None if not solved), *status* code (OK or ERROR) and *message* (if there is an error). If the client sends a bad request (e.g: missing Content-Type or missing sudoku key), the server sends a HTTP 400 (Bad Request) detailing the error.
