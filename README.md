@@ -68,7 +68,7 @@ NOTE that *sudoku* is a mandatory *key* in all the following formats.
 
 #### Form-based request
 
-`curl -X POST -d "sudoku=9715..842..69...1....8.2..95.....79...76.83...28.....57..1.5....4...91..819..7254" http://127.0.0.1:5000`
+`curl -X POST -d "sudoku=9715..842..69...1....8.2..95.....79...76.83...28.....57..1.5....4...91..819..7254" https://sudoku-api.onrender.com`
 
 ## Example Responses
 
